@@ -1,0 +1,272 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar - Common for all pages */
+.sidebar {
+    width: 250px;
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar .logo {
+    width: 100%;
+}
+
+.sidebar h2 {
+    font-size: 16px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+.btn-text {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.btn-text.active {
+    background-color: #1ABC9C;
+}
+
+.logout-text {
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Main Content - Common for all pages */
+.content {
+    flex: 1;
+    padding: 100px;
+    background-color: #ECF0F1;
+    max-width: 1100px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Page Titles - Common for all pages */
+.page-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Styles for event.html and add_event.html */
+.event-section {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.event-form {
+    margin-top: 20px;
+}
+
+/* Styles for attendance.html */
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 15px;
+}
+
+.attendance-table, .attendance-table th, .attendance-table td {
+    border: 1px solid #BDC3C7;
+}
+
+.attendance-table th {
+    background-color: #0e3550;
+    color: white;
+}
+
+/* Styles for members.html */
+.members-list {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.member-item {
+    border-bottom: 1px solid #BDC3C7;
+    padding: 10px;
+}
+
+/* Styles for organization.html */
+.organization-details {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.organization-header {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Table Styles - Used in multiple pages */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #BDC3C7;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #0e3550;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #F2F2F2;
+}
+
+/* Forms - Used in event.html, add_event.html, organization.html */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #BDC3C7;
+    border-radius: 4px;
+}
+
+/* Buttons - Used in all pages */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #27AE60;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #219150;
+}
+
+/* Search Bar - Used in members.html and attendance.html */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.search-bar {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #BDC3C7;
+    border-radius: 4px;
+}
+
+/* Profile Section - Likely used in organization.html */
+.profile-container {
+    margin-top: 20px;
+}
+
+.profile-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* Status Update - Likely used in organization.html */
+.status-update {
+    margin-top: 20px;
+}
+
+.status-update input {
+    padding: 5px;
+    margin-left: 10px;
+    width: 200px;
+}
+
+.update-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .btn-text {
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    .profile-details {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+}
+

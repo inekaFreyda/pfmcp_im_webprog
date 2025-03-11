@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PFMCP Dashboard</title>
+    <link rel="stylesheet" href="../css/event.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="../images/LOGOS.png" alt="Logo" class="logo">
+            <h2>Philippine Federation of <br> Catholic Married Priests <br> (PFMCP)</h2>
+            <br>
+            <br>
+            <nav>
+                <nav>
+                    <a href="event.html" class="btn-text active">Events</a>
+                    <a href="members.html" class="btn-text">Members</a>
+                    <a href="organizations.html" class="btn-text">Organizations</a>
+                </nav>
+                
+            </nav>
+            <br>
+            <br>
+            <span class="logout-text">Logout</span>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h3>Events and Activities</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Event No.</th>
+                        <th>Event/Activity Name</th>
+                        <th>Location</th>
+                        <th>Date of Event</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="eventTableBody">
+                </tbody>
+            </table>
+            <br>
+            <button class="event-text" onclick="window.location.href='eventForm.html'">Add Event</button>
+
+        </main>
+    </div>
+    <script src="../js/event.js"></script>
+</body>
+</html>

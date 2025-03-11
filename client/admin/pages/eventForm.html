@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event - PFMCP</title>
+    <link rel="stylesheet" href="../css/event.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar (Same as Events Page) -->
+        <aside class="sidebar">
+            <img src="../images/LOGOS.png" alt="Logo" class="logo">
+            <h2>Philippine Federation of <br> Catholic Married Priests <br> (PFMCP)</h2>
+            <nav>
+                <a href="event.html" class="btn-text active">Events</a>
+                <a href="members.html" class="btn-text">Members</a>
+                <a href="organizations.html" class="btn-text">Organizations</a>
+            </nav>
+            <span class="logout-text">Logout</span>
+        </aside>
+
+        <!-- Main Content - Add Event Form -->
+        <main class="content">
+            <h2>Event/Activity Post</h2>
+            <form id="eventForm">
+                <label>Island ID:</label>
+                <input type="number" id="island" required>
+            
+                <label>Status:</label>
+                <select id="status">
+                    <option value="7">Ongoing</option>
+                    <option value="8">Completed</option>
+                    <option value="9">Cancelled</option>
+                    <option value="10">Upcoming</option>
+                </select>
+            
+                <label>Location:</label>
+                <input type="text" id="location" required>
+            
+                <label>Event Name:</label>
+                <input type="text" id="eventName" required>
+            
+                <label>Description:</label>
+                <textarea id="description" required></textarea>
+            
+                <label>Event Date:</label>
+                <input type="date" id="eventDate" required>
+            
+                <label>Event Time:</label>
+                <input type="time" id="eventTime" required>
+            
+                <button type="submit">Add Event</button>
+                <button class="event-text" onclick="window.location.href='event.html'">Cancel</button>
+            </form>
+            <script src="../js/addEvent.js"></script>            
+        </main>
+    </div>
+
+</body>
+</html>
