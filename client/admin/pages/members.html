@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members - PFMCP</title>
+    <link rel="stylesheet" href="../css/event.css">
+</head>
+<body>
+
+    <div class="container">
+         <!-- Sidebar -->
+         <aside class="sidebar">
+            <img src="../images/LOGOS.png" alt="Logo" class="logo">
+            <h2>Philippine Federation of <br> Catholic Married Priests <br> (PFMCP)</h2>
+            <br>
+            <br>
+            <nav>
+                <nav>
+                    <a href="event.html" class="btn-text">Events</a>
+                    <a href="members.html" class="btn-text active">Members</a>
+                    <a href="org.html" class="btn-text">Organizations</a>
+                </nav> 
+            </nav>
+            <br>
+            <br>
+            <button class="logout">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h2>Members List</h2>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <button class="event-text">Search</button>
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+
+            <!-- Members Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Member No.</th>
+                        <th>Name</th>
+                        <th>Organization</th>
+                        <th>Contact No.</th>
+                        <th>Email</th>
+                        <th>Member Status</th>
+                    </tr>
+                </thead>
+                <tbody id="memberTableBody"></tbody>
+            </table>        
+        </main>
+    </div>
+    <script src="../js/member.js"></script> 
+    <script src="../js/adminLogout.js"></script>   
+</body>
+</html>

@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav {
+    background-color: #ff9a00;
+    width: 100%;
+    max-width: 100%;
+    height: 60px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav a:hover {
+    background-color: #e68900;
+}
+
+.nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav li{
+    display: inline-block;
+    margin: 0 100px;
+}
+.tran{
+    transition: all 1s ease-in-out;
+}
+
+.banner {
+    max-width: 100%;
+    width: 100%;
+    height: auto; 
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    overflow: hidden;
+}
+
+.info{
+    width: 100%;
+    height: 20vw;
+    background-color: #efefef;
+    resize: both;
+    overflow: auto;
+}
+
+.stats{
+    background-color: white;
+    width: 100%;
+    height: 500px;
+}
+
+footer {
+    background-color: #efefef; /* Light gray background */
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Ensures space between elements */
+    align-items: center;
+    max-width: 1200px; /* Adjust for responsiveness */
+    margin: auto;
+    padding: 10px 20px;
+}
+
+.contact {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adds spacing between text and icons */
+    justify-content: center;
+}
+
+.contact img {
+    width: 24px; /* Adjust size for icons */
+    height: auto;
+}
+
+.rights {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    text-align: center;
+    vertical-align: center;
+}
+
+
+.info {
+    display: flex;
+    justify-content: space-between; /* Distributes elements evenly */
+    align-items: center; /* Aligns elements vertically */
+    width: 100vw; /* Full screen width */
+    background-color: #f1f1f1; /* Matches background */
+}
+
+/* Left Section (Description & Join Us) */
+.text-container {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.column{
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+/* Description Styling */
+.desc-left {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2vw;
+    text-align: justify;
+    margin-left: 2%;
+}
+
+
+/* Right Section (Register Organization) */
+.regorg-right {
+    flex: 0 0 auto; /* Prevents resizing */
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5vw;
+    padding-left: 30px;
+    margin-right: 3%;
+}
+
+.reg-btn{
+    background-color: #f4a825;
+    border: none;
+    padding: 7px 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.5vw;
+}
+
+.reg-btn:hover{
+    background-color:#d98c1c ;
+}
+

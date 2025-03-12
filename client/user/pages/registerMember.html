@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Member</title>
+    <link rel="stylesheet" href="../css/registerMember.css">
+</head>
+<body>
+    <div class="top-bar">
+        <ul>
+            <li><a href="./index.html" class="tran">Home</a></li>
+            <li><a href="/Events/index.html">Events</a></li>
+            <li><a href="/AboutUs/index.html">About Us</a></li>
+            <li><a href="./registerMember.html">Register Member</a></li>
+        </ul>
+    </div>
+    <div class="join-us">
+        <button onclick="window.location.href='index.html'">Return</button>
+    </div>
+    
+    <div class="container">
+        <h1 style="font-size: 32px;">Register Member</h1>
+        <img src="../images/background for registry.png" alt="Background Image" class="background-image">
+
+        <form id="registerForm" class="form-columns" method="POST">
+            <div class="form-column">
+                <div class="form-row">
+                    <label for="firstname">FIRSTNAME</label>
+                    <input type="text" id="firstname" name="firstname" required>
+                </div>
+                <div class="form-row">
+                    <label for="middlename">MIDDLE NAME</label>
+                    <input type="text" id="middlename" name="middlename">
+                </div>
+                <div class="form-row">
+                    <label for="surname">SUR NAME</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+                <div class="form-row">
+                    <label for="birthdate">BIRTHDATE</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                <div class="form-row">
+                    <label for="island">ISLAND</label>
+                    <select id="island" name="island">
+                        <option value="">Select Island</option>
+                        <option value="1">Luzon</option>
+                        <option value="2">Visayas</option>
+                        <option value="3">Mindanao</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="region">REGION</label>
+                    <select id="region" name="region" disabled>
+                        <option value="">Select Region</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="province">PROVINCE</label>
+                    <select id="province" name="province" disabled>
+                        <option value="">Select Province</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="municipality">MUNICIPALITY</label>
+                    <select id="municipality" name="municipality" disabled>
+                        <option value="">Select Municipality</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="barangay">BARANGAY</label>
+                    <select id="barangay" name="barangay" disabled>
+                        <option value="">Select Barangay</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="address">ADDRESS</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="form-row">
+                    <label for="contact">CONTACT NO.</label>
+                    <input type="text" id="contact" name="contact" required>
+                </div>
+                <div class="form-row">
+                    <label for="contact">EMAIL</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-row">
+                    <label for="occupation">OCCUPATION</label>
+                    <input type="text" id="occupation" name="occupation">
+                </div>
+                <div class="form-row">
+                    <label for="priesthood">PRIESTHOOD</label>
+                    <input type="text" id="priesthood" name="priesthood">
+                </div>
+                <div class="form-row">
+                    <label for="organization">ORGANIZATION / AFFILIATION</label>
+                    <select id="organization" name="organization">
+                        <option value="">Select Organization</option>
+                    </select>
+                </div>                
+            </div>
+            <div class="join-us">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/registerMember.js"></script>
+</body>
+</html>

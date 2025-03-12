@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizations - PFMCP</title>
+    <link rel="stylesheet" href="../css/event.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="../images/LOGOS.png" alt="Logo" class="logo">
+            <h2>Philippine Federation of <br> Catholic Married Priests <br> (PFMCP)</h2>
+            <br>
+            <br>
+            <nav>
+                <a href="event.html" class="btn-text">Events</a>
+                <a href="members.html" class="btn-text">Members</a>
+                <a href="org.html" class="btn-text active">Organizations</a>
+            </nav>
+            <br>
+            <br>
+            <button class="logout">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h2>Organization List</h2>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <button class="event-text">Search</button>
+                <input type="text" placeholder="Search..." class="search-bar">
+            </div>
+
+            <!-- Organizations Table -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Org No.</th>
+                        <th>Name</th>
+                        <th>Representative</th>
+                        <th>Organization Status</th>
+                    </tr>
+                </thead>
+                <tbody id="orgTable"></tbody> <!-- ✅ Dynamic Data Will Load Here -->
+            </table>
+        </main>
+    </div>
+    <script src="../js/org.js"></script> 
+    <script src="../js/adminLogout.js"></script> 
+</body>
+</html>

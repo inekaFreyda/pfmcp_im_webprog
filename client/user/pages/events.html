@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PFCMP</title>
+    <link rel="stylesheet" href="../css/events.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.png" class="logo">
+</head>
+<body>
+    <!-- <div class="header">
+        <img src="../images/logo.png" class="logo1">
+        <header>Philippine Federation of Catholic Married Pariests(PFMCP)</header>
+    </div> -->
+    <div class="nav">
+        <ul>
+            <li><a href="./index.html" class="tran">Home</a></li>
+            <li><a href="/Events/index.html">Events</a></li>
+            <li><a href="./aboutUs.html">About Us</a></li>
+            <li><a href="./registerMember.html">Register Member</a></li>
+        </ul>
+    </div>
+    
+    <div class="events-container">
+        <div class="event-box upper-row">
+            <button class="arrow left-arrow" onclick="changeUpcomingEvent(-1)">&#10094;</button>
+            <img src="../images/Iloilo.jpg" id="eventImage">
+            <button class="arrow right-arrow" onclick="changeUpcomingEvent(1)">&#10095;</button>
+        </div>
+        <div class="event-text-box upper-row">
+            <p id="eventText">17th PFMCP National Convention in Iloilo City <br>April 13, 2023</p>
+            <h1 class="up">Upcoming Events</h1>
+        </div>
+        
+        <div class="event-box lower-row">
+            <button class="arrow left-arrow" onclick="changeCurrentEvent(-1)">&#10094;</button>
+            <img src="../images/18th.jpg" id="currentEventImage">
+            <button class="arrow right-arrow" onclick="changeCurrentEvent(1)">&#10095;</button>
+        </div>
+        <div class="event-text-box lower-row">
+            <p id="currentEventText">Davao Agape Married Priests Association Christmas Celebration 2023 <br>December 10, 2023</p>
+            <h1 class="current">Current Events</h1>
+        </div>
+        
+        
+    </div>
+    
+
+    <script src="script.js"></script>
+    <footer>
+        <div class="contact">
+            <div>Contact Us: </div>
+            <a href="https://www.facebook.com/profile.php?id=100092619006822" target="_blank"><img src="Facebook_logo_PNG35.png" ></a>
+            <a href="mailto:philfed.marriedcatholicpriests@gmail.com" target="_blank"><img src="gmail.png"></a>
+        </div>
+
+        <div class="rights">All Rights Reserved made with love and closer to God</div>
+    </footer>
+</body>
+</html>

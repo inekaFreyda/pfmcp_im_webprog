@@ -8,9 +8,15 @@ app.use(cors());
 
 const authRoutes = require('./routes/authRoutes');
 const eventRoutes = require('./routes/eventRoutes');
+const memberRoutes = require('./routes/memberRoutes');
+const addressRoutes = require('./routes/addressRoutes');
+const organizationRoutes = require('./routes/organizationRoutes');
 
 app.use('/auth', authRoutes);
 app.use('/event', eventRoutes);
+app.use('/member', memberRoutes);
+app.use('/address', addressRoutes);
+app.use('/organization', organizationRoutes);
 
 const PORT = 3002;
 app.listen(PORT, () => {

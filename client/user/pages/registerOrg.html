@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Organization</title>
+    <link rel="stylesheet" href="../css/registerMember.css">
+</head>
+</head>
+<body>
+    <div class="top-bar">
+        <ul>
+            <li><a href="./index.html" class="tran">Home</a></li>
+            <li><a href="/Events/index.html">Events</a></li>
+            <li><a href="/AboutUs/index.html">About Us</a></li>
+            <li><a href="./registerMember.html">Register Member</a></li>
+        </ul>
+    </div>
+    <div class="join-us">
+        <button onclick="window.location.href='index.html'">Return</button>
+    </div>
+
+    <div class="container">
+        <h1 style="font-size: 32px;">Register Organization</h1>
+        <img src="../images/background for registry.png" alt="Background Image" class="background-image">
+        <form id="registerOrg" class="form-columns">
+            <div class="form-column">
+                <div class="form-row">
+                    <label for="org-name">ORG NAME</label>
+                    <input type="text" id="org-name" name="org-name">
+                </div>
+                <div class="form-row">
+                    <label for="rep-name">REPRESENTATIVE NAME</label>
+                    <input type="text" id="rep-name" name="rep-name">
+                </div>
+                <div class="form-row">
+                    <label for="island">ISLAND</label>
+                    <select id="island" name="island">
+                        <option value="">Select Island</option>
+                        <option value="1">Luzon</option>
+                        <option value="2">Visayas</option>
+                        <option value="3">Mindanao</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="address">ADDRESS</label>
+                    <input type="text" id="address" name="address">
+                </div>
+                <div class="form-row">
+                    <label for="established">ESTABLISHED ON</label>
+                    <input type="date" id="established" name="established">
+                </div>
+            </div> 
+        <div class="join-us">
+            <button type="submit">Register Organization</button>
+        </div>
+    </div>
+    <script src="../js/registerOrg.js"></script>
+</body>
+</html>
