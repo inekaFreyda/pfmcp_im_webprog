@@ -25,74 +25,15 @@ const Member = {
 
     addMember: (memberData, callback) => {
         const { firstname, middlename, surname, birthdate, barangay, address, contact, email, occupation, priesthood, organization, memberStatus } = memberData;
-    
-        db.beginTransaction((err) => {
+
+        const query = `CALL RegisterMember(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+        db.query(query, [firstname, middlename, surname, birthdate, barangay, address, contact, email, occupation, priesthood, organization, memberStatus], 
+        (err, results) => {
             if (err) return callback(err, null);
-    
-            const personQuery = `INSERT INTO person (person_firstname, person_middlename, person_surname, birthdate) VALUES (?, ?, ?, ?)`;
-            // console.log("Executing Query:", personQuery, [firstname, middlename, surname, birthdate]);
-    
-            db.query(personQuery, [firstname, middlename, surname, birthdate], (err, result) => {
-                if (err) {
-                    console.error("Error inserting into person:", err);
-                    return db.rollback(() => callback(err, null));
-                }
-    
-                const personID = result.insertId;
-                // console.log("Inserted Person ID:", personID);
-    
-                const addressQuery = `INSERT INTO address (Barangay_ID, Description, person_ID) VALUES (?, ?, ?)`;
-                // console.log("Executing Query:", addressQuery, [barangay, address, personID]);
-    
-                db.query(addressQuery, [barangay, address, personID], (err) => {
-                    if (err) return db.rollback(() => callback(err, null));
-    
-                    const contactQuery = `INSERT INTO contact (contactNo, email, person_ID) VALUES (?, ?, ?)`;
-                    // console.log("Executing Query:", contactQuery, [contact, email, personID]);
-    
-                    db.query(contactQuery, [contact, email, personID], (err) => {
-                        if (err) return db.rollback(() => callback(err, null));
-    
-                        const occupationQuery = `INSERT INTO occupation (Person_ID, OccupationName) VALUES (?, ?)`;
-                        // console.log("Executing Query:", occupationQuery, [personID, occupation]);
-    
-                        db.query(occupationQuery, [personID, occupation], (err) => {
-                            if (err) return db.rollback(() => callback(err, null));
-    
-                            const priesthoodQuery = `INSERT INTO priesthood (Person_ID, priesthood_name) VALUES (?, ?)`;
-                            // console.log("Executing Query:", priesthoodQuery, [personID, priesthood]);
-    
-                            db.query(priesthoodQuery, [personID, priesthood], (err) => {
-                                if (err) return db.rollback(() => callback(err, null));
-    
-                                const orgQuery = `SELECT org_ID FROM organization WHERE org_ID = ?`;
-                                // console.log("Executing Query:", orgQuery, [organization]);
-    
-                                db.query(orgQuery, [organization], (err, orgResult) => {
-                                    if (err) return db.rollback(() => callback(err, null));
-    
-                                    const orgID = orgResult.length ? orgResult[0].org_ID : null;
-                                    // console.log("Found Organization ID:", orgID);
-    
-                                    const memberQuery = `INSERT INTO member (person_ID, org_ID, mem_statusID, Mem_registerDate) VALUES (?, ?, ?, NOW())`;
-                                    // console.log("Executing Query:", memberQuery, [personID, orgID, memberStatus]);
-    
-                                    db.query(memberQuery, [personID, orgID, memberStatus], (err, finalResult) => {
-                                        if (err) return db.rollback(() => callback(err, null));
-    
-                                        db.commit((err) => {
-                                            if (err) return db.rollback(() => callback(err, null));
-    
-                                            console.log("✅ Member registered successfully!");
-                                            callback(null, { message: "Member registered successfully", memberID: finalResult.insertId });
-                                        });
-                                    });
-                                });
-                            });
-                        });
-                    });
-                });
-            });
+
+            console.log("✅ Member registered successfully!", results);
+            callback(null, { message: "Member registered successfully", memberID: results[0][0].MemberID });
         });
     },
     

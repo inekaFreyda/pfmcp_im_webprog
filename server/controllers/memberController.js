@@ -18,7 +18,7 @@ exports.addMember = (req, res) => {
     });
 };
 
-// ✅ NEW FUNCTION: Get Barangays
+// ✅ Get Barangays
 exports.getBarangays = (req, res) => {
     Member.getBarangays((err, barangays) => {
         if (err) return res.status(500).json({ message: "Error fetching barangays", error: err });
@@ -26,6 +26,7 @@ exports.getBarangays = (req, res) => {
     });
 };
 
+// ✅ Update Member Status
 exports.updateMemberStatus = (req, res) => {
     const memberID = req.params.id;
     const { statusID } = req.body;
@@ -36,10 +37,10 @@ exports.updateMemberStatus = (req, res) => {
     });
 };
 
+// ✅ Get Organizations for Dropdown
 exports.getOrganizations = (req, res) => {
     Member.getOrganizations((err, organizations) => {
         if (err) return res.status(500).json({ message: "Error fetching organizations", error: err });
         res.json(organizations);
     });
 };
-
