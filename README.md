@@ -1,18 +1,42 @@
+ 
+<div align="center">
+<img src="https://github.com/inekaFreyda/pfmcp_im_webprog/blob/main/readmeImg/Current%20Events.png?raw=true" align="center" height="150" width="" />
+</div>  
+  
 
-## Intro  
 ## <div align="center">PFMCP Member and Organization Management Web Application</div>  
   
 
-### How to set up:  
+## How to set up:  
   
 
-- To run this program, navigate to this website: link kemerut  
+To run this program, navigate to this website: 
+
+For Users:
+
+For Admin:
+  
+  
+
+### When clicked, you will be directly be navigated to this page
+
+Users:  
+  
+
+<img src="https://github.com/inekaFreyda/pfmcp_im_webprog/blob/main/readmeImg/homepage.png?raw=true" align="left" style="width: 100%" />  
+  
+<br>
+<br>
+Admin:  
+  
+
+<img src="https://github.com/inekaFreyda/pfmcp_im_webprog/blob/main/readmeImg/Admin.png?raw=true" align="left" style="width: 100%" />  
   
 
 <br/>  
-
+<br>
+<h2>Applications used:</h2>
 <table><tr><td valign="top" width="33%">
-
 
 
 ### Frontend  
@@ -32,7 +56,7 @@
 <a href="https://www.mysql.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/mysql-original-wordmark.svg" alt="MySQL" height="50" /></a>  
 </div>
 
-
+</td>
 
 
 
