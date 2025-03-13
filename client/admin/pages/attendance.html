@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Attendance - PFMCP</title>
+    <link rel="stylesheet" href="../css/org profile.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="../images/LOGOS.png" alt="Logo" class="logo">
+            <h2>Philippine Federation of <br> Catholic Married Priests <br> (PFMCP)</h2>
+            <br>
+            <br>
+            <nav>
+                <nav>
+                    <a href="event.html" class="btn-text">Events</a>
+                    <a href="members.html" class="btn-text">Members</a>
+                    <a href="org.html" class="btn-text active">Organizations</a>
+                </nav>
+                
+            </nav>
+            <br>
+            <br>
+            <span class="logout-text">Logout</span>
+        </aside>
+        <!-- Main Content -->
+        <main class="content">
+            <button class="back" onclick="window.location.href='org.html'">Back</button>
+            <h2 class="profile-title">Attendance</h2>
+
+            <div class="profile-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Attendance No.</th>
+                            <th>Member No.</th>
+                            <th>Name</th>
+                            <th>Organization</th>
+                            <th>Time In</th>
+                            <th>Time Out</th>
+                            <th>Attendance</th>
+                        </tr>
+                    </thead>
+                    <tbody id="memberTableBody"></tbody>
+                </table>  
+            </div>
+        </main>
+    </div>
+    <script src="../js/attendance.js"></script>
+</body>
+</html>

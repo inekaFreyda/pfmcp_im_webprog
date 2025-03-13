@@ -33,10 +33,10 @@
 
             <!-- Search Bar -->
             <div class="search-container">
-                <button class="event-text">Search</button>
-                <input type="text" placeholder="Search..." class="search-bar">
-            </div>
-
+                <button id="memberSearchBtn" class="event-text">Search</button>
+                <input type="text" id="memberSearch" placeholder="Search..." class="search-bar">
+            </div>                        
+            
             <!-- Members Table -->
             <table>
                 <thead>
@@ -50,7 +50,8 @@
                     </tr>
                 </thead>
                 <tbody id="memberTableBody"></tbody>
-            </table>        
+            </table>  
+                 
         </main>
     </div>
     <script src="../js/member.js"></script> 

@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.logout {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar .logo {
+    width: 100%;
+}
+
+.sidebar h2 {
+    font-size: 16px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #219150;
+}
+
+.btn-text {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.btn-text.active {
+    background-color: #1ABC9C;
+}
+.back{
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-text {
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.profile-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.profile-container {
+    margin-top: 20px;
+}
+
+.profile-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+.profile-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.status-update {
+    margin-top: 20px;
+}
+
+.status-update select {
+    padding: 5px;
+    margin-left: 10px;
+    width: 200px;
+}
+
+.update-btn {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

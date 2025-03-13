@@ -4,6 +4,7 @@ const organizationController = require('../controllers/organizationController');
 
 router.post('/register', organizationController.registerOrganization);
 router.get('/organizations', organizationController.getOrganizations);
-router.put('/update-status/:orgID', organizationController.updateOrganizationStatus); 
+router.put('/update-status/:orgID', organizationController.updateOrganizationStatus);
+router.get("/:id", organizationController.getOrganizationById);
 
 module.exports = router;

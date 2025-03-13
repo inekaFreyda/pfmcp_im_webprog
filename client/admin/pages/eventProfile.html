@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Profile - PFMCP</title>
+    <link rel="stylesheet" href="../css/org profile.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="../images/LOGOS.png" alt="Logo" class="logo">
+            <h2>Philippine Federation of <br> Catholic Married Priests <br> (PFMCP)</h2>
+            <br>
+            <br>
+            <nav>
+                <nav>
+                    <a href="event.html" class="btn-text active">Events</a>
+                    <a href="members.html" class="btn-text">Members</a>
+                    <a href="org.html" class="btn-text">Organizations</a>
+                </nav>
+                
+            </nav>
+            <br>
+            <br>
+            <button class="logout">Logout</button>
+        </aside>
+        <!-- Main Content -->
+        <main class="content">
+            <button class="back" onclick="window.location.href='event.html'">Back</button>
+            <h2 class="profile-title">Event Details</h2>
+
+            <div class="profile-container">
+                <div class="profile-details">
+                    <div class="left-column">
+                        <p><strong>Event Name:</strong> <span id="event-name"></span></p>
+                        <p><strong>Description:</strong> <span id="event-desc"></span></p>
+                        <p><strong>Island Group:</strong> <span id="event-island"></span></p>
+                        <p><strong>Location:</strong> <span id="event-loc"></span></p>
+                        <p><strong>Event Date:</strong> <span id="event-date"></span></p>
+                        <p><strong>Event Time:</strong> <span id="event-time"></span></p>
+                    </div>
+                </div>
+                <div class="status-update">
+                    <label for="event-status"><strong>Event Status:</strong></label>
+                    <select id="event-status">
+                        <option value="7">Ongoing</option>
+                        <option value="8">Completed</option>
+                        <option value="9">Cancelled</option>
+                        <option value="10">Upcoming</option>
+                    </select>
+                    <button class="update-btn">Update Status</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/eventProfile.js"></script>
+    <script src="../js/adminLogout.js"></script> 
+</body>
+</html>

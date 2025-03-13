@@ -7,6 +7,16 @@ exports.getMembers = (req, res) => {
     });
 };
 
+exports.getMemberById = (req, res) => {
+    const memberID = req.params.id;
+
+    Member.getMemberById(memberID, (err, member) => {
+        if (err) return res.status(500).json({ message: "Error fetching member", error: err });
+        if (!member) return res.status(404).json({ message: "Member not found" });
+        res.json(member);
+    });
+};
+
 exports.addMember = (req, res) => {
     console.log("Received Data:", req.body); // ✅ Debugging
 
@@ -18,15 +28,6 @@ exports.addMember = (req, res) => {
     });
 };
 
-// ✅ Get Barangays
-exports.getBarangays = (req, res) => {
-    Member.getBarangays((err, barangays) => {
-        if (err) return res.status(500).json({ message: "Error fetching barangays", error: err });
-        res.json(barangays);
-    });
-};
-
-// ✅ Update Member Status
 exports.updateMemberStatus = (req, res) => {
     const memberID = req.params.id;
     const { statusID } = req.body;
@@ -37,7 +38,14 @@ exports.updateMemberStatus = (req, res) => {
     });
 };
 
-// ✅ Get Organizations for Dropdown
+exports.getBarangays = (req, res) => {
+    Member.getBarangays((err, barangays) => {
+        if (err) return res.status(500).json({ message: "Error fetching barangays", error: err });
+        res.json(barangays);
+    });
+};
+
+
 exports.getOrganizations = (req, res) => {
     Member.getOrganizations((err, organizations) => {
         if (err) return res.status(500).json({ message: "Error fetching organizations", error: err });

@@ -7,6 +7,6 @@ router.post('/add-member', memberController.addMember); // New route for registr
 router.get('/barangays', memberController.getBarangays);
 router.put("/update-status/:id", memberController.updateMemberStatus);
 router.get("/organizations", memberController.getOrganizations);
-
+router.get('/:id', memberController.getMemberById);
 
 module.exports = router;

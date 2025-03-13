@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Profile - PFMCP</title>
+    <link rel="stylesheet" href="../css/org profile.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="../images/LOGOS.png" alt="Logo" class="logo">
+            <h2>Philippine Federation of <br> Catholic Married Priests <br> (PFMCP)</h2>
+            <br>
+            <br>
+            <nav>
+                <nav>
+                    <a href="event.html" class="btn-text">Events</a>
+                    <a href="members.html" class="btn-text">Members</a>
+                    <a href="org.html" class="btn-text active">Organizations</a>
+                </nav>
+                
+            </nav>
+            <br>
+            <br>
+            <button class="logout">Logout</button>
+        </aside>
+        <!-- Main Content -->
+        <main class="content">
+            <button class="back" onclick="window.location.href='org.html'">Back</button>
+            <h2 class="profile-title">Organization Profile</h2>
+
+            <div class="profile-container">
+                <div class="profile-details">
+                    <div class="left-column">
+                        <p><strong>Organization Name:</strong> <span id="org-name"></span></p>
+                        <p><strong>Representative Name:</strong> <span id="rep-name"></span></p>
+                        <p><strong>Island Group:</strong> <span id="org-island"></span></p>
+                        <p><strong>Established On:</strong> <span id="org-established"></span></p>
+                        <p><strong>Contact No.:</strong> <span id="rep-contact"></span></p>
+                        <p><strong>Email:</strong> <span id="rep-email"></span></p>
+                    </div>
+            
+                    <div class="right-column">
+                        <p><strong>Number of Members (Registered):</strong> <span id="numberOfMembers"></span></p>
+                    </div>
+                </div>
+            
+                <div class="status-update">
+                    <label for="organization-status"><strong>Organization Status:</strong></label>
+                    <select id="organization-status">
+                        <option value="4">Pending</option>
+                        <option value="5">Approved</option>
+                        <option value="6">Rejected</option>
+                    </select>
+                    <button class="update-btn">Update Status</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/orgProfile.js"></script>
+    <script src="../js/adminLogout.js"></script> 
+</body>
+</html>

@@ -222,12 +222,14 @@ input, textarea, select {
 /* Status Update - Likely used in organization.html */
 .status-update {
     margin-top: 20px;
+    display: flex;
+    justify-content: space-between ;
 }
 
-.status-update input {
-    padding: 5px;
+.status-update select{
+    padding: 50px;
     margin-left: 10px;
-    width: 200px;
+    width: 55%;
 }
 
 .update-btn {

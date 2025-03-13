@@ -16,7 +16,7 @@ document.getElementById("registerForm").addEventListener("submit", function (e) 
         email: document.getElementById("email").value,
         occupation: document.getElementById("occupation").value,
         priesthood: document.getElementById("priesthood").value,
-        organization: document.getElementById("organization").value,
+        organization: parseInt(document.getElementById("organization").value, 10) || null, 
         memberStatus: 1 // Default status (e.g., Pending)
     };
 

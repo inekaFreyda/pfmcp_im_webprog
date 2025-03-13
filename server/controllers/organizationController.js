@@ -2,8 +2,32 @@ const Organization = require('../models/organizationModel');
 
 exports.getOrganizations = (req, res) => {
     Organization.getAllOrganizations((err, organizations) => {
-        if (err) return res.status(500).json({ message: 'Error fetching organizations', error: err });
+        if (err) {
+            console.error("Error fetching organizations:", err);
+            return res.status(500).json({ message: "Error fetching organizations", error: err });
+        }
+
+        console.log("Returning Organizations:", organizations); // ✅ Debugging
         res.json(organizations);
+    });
+};
+
+exports.getOrganizationById = (req, res) => {
+    const orgID = req.params.id;
+    console.log(`Fetching organization with ID: ${orgID}`);
+
+    Organization.getOrganizationById(orgID, (err, organization) => {
+        if (err) {
+            console.error("Database error:", err);
+            return res.status(500).json({ message: "Error fetching organization", error: err });
+        }
+
+        if (!organization) {
+            console.error(`No organization found with ID: ${orgID}`);
+            return res.status(404).json({ message: "Organization not found" });
+        }
+
+        res.json(organization);
     });
 };
 

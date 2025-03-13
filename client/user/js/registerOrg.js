@@ -2,8 +2,10 @@ document.getElementById("registerOrg").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const orgData = {
-        orgName: document.getElementById("org-name").value,
-        repName: document.getElementById("rep-name").value, // ✅ Now using name directly
+        orgName: document.getElementById("org-name").value.trim(),
+        repName: document.getElementById("rep-name").value.trim(),
+        repContact: document.getElementById("contact").value.trim(), // ✅ Added representative contact
+        repEmail: document.getElementById("email").value.trim(), // ✅ Added representative email
         islandID: document.getElementById("island").value,
         establishedOn: document.getElementById("established").value
     };

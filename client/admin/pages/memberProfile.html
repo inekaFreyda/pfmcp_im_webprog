@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Profile - PFMCP</title>
+    <link rel="stylesheet" href="../css/member profile.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <img src="../images/LOGOS.png" alt="Logo" class="logo">
+            <h2>Philippine Federation of <br> Catholic Married Priests <br> (PFMCP)</h2>
+            <br>
+            <br>
+            <nav>
+                <a href="event.html" class="btn-text">Events</a>
+                <a href="members.html" class="btn-text active">Members</a>
+                <a href="org.html" class="btn-text">Organizations</a>
+            </nav>
+            <br>
+            <br>
+            <button class="logout">Logout</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <button class="back" onclick="window.location.href='member.html'">Back</button>
+            <h2 class="profile-title">Member Profile</h2>
+
+            <div class="profile-container">
+                <div class="profile-details">
+                    <div class="left-column">
+                        <p><strong>Name:&nbsp;&nbsp;</strong> <span id="member-name"></span></p>
+                        <p><strong>Contact No.:&nbsp;&nbsp;</strong> <span id="member-contact"></span></p>
+                        <p><strong>Email:&nbsp;&nbsp;</strong> <span id="member-email"></span></p>
+                        <p><strong>Occupation:&nbsp;&nbsp;</strong> <span id="member-occupation"></span></p>
+                        <p><strong>Organization/Affiliation:&nbsp;&nbsp;</strong> <span id="member-organization"></span></p>
+                    </div>
+
+                    <div class="right-column">
+                        <p><strong>Address:&nbsp;&nbsp;</strong> <span id="member-address"></span></p>
+                        <p><strong>Island Group:&nbsp;&nbsp;</strong> <span id="member-island"></span></p>
+                        <p><strong>City:&nbsp;&nbsp;</strong> <span id="member-city"></span></p>
+                        <p><strong>Barangay:&nbsp;&nbsp;</strong> <span id="member-barangay"></span></p>
+                        <p><strong>Province:&nbsp;&nbsp;</strong> <span id="member-province"></span></p>
+                        <p><strong>Region:&nbsp;&nbsp;</strong> <span id="member-region"></span></p>
+                    </div>
+                </div>
+                <p><strong>Diocese/Archdiocese or Religious Congregation:&nbsp;&nbsp;</strong> <span id="member-priesthood"></span></p>
+
+                <div class="status-update">
+                    <label for="member-status"><strong>Member Status:</strong></label>
+                    <select id="member-status">
+                        <option value="1">Pending</option>
+                        <option value="2">Approved</option>
+                        <option value="3">Rejected</option>
+                    </select>
+                    <button class="update-btn">Update Status</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../js/memberProfile.js"></script>
+    <script src="../js/adminLogout.js"></script> 
+</body>
+</html>

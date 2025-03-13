@@ -1,11 +1,19 @@
 const Event = require('../models/eventModel');
 
-exports.getEvents = (req, res) => {
+exports.getAllEvents = (req, res) => {
     Event.getAllEvents((err, events) => {
-        if (err) {
-            return res.status(500).json({ message: 'Error fetching events', error: err });
-        }
+        if (err) return res.status(500).json({ message: "Error fetching events", error: err });
         res.json(events);
+    });
+};
+
+exports.getEventById = (req, res) => {
+    const eventID = req.params.id;
+
+    Event.getEventById(eventID, (err, event) => {
+        if (err) return res.status(500).json({ message: "Error fetching event", error: err });
+        if (!event) return res.status(404).json({ message: "Event not found" });
+        res.json(event);
     });
 };
 
