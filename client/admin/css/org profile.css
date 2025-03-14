@@ -118,3 +118,13 @@ nav {
     border: none;
     cursor: pointer;
 }
+
+.attend-btn {
+    margin-top: 10px;
+    padding: 10px;
+    padding-inline: 100px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

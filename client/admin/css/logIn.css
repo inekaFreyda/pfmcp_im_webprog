@@ -72,12 +72,13 @@ input {
 /* Login Button (Fixed Alignment) */
 .button-container {
     display: flex;
-    justify-content: center; /* Centers the button */
+    justify-content: space-around;
+    
     margin-top: 10px;
-}
+} 
 
 button {
-    width: 100%;
+    width: 40%;
     padding: 12px;
     background-color: #5DADE2;
     color: white;
@@ -88,6 +89,22 @@ button {
     font-weight: bold;
 }
 
+.button-close {
+    width: 40%;
+    padding: 12px;
+    background-color: #dd3737;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
 button:hover {
     background-color: #3498DB;
+}
+
+.button-close:hover {
+    background-color: #f76d6d;
 }

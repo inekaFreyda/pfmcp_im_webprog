@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="../css/logIn.css">
+</head>
+<body>
+    <h1 class="title">Philippine Federation of Catholic Married Priests <br> (PFMCP)</h1>
+    
+    <div class="login-container">
+        <img src="../images/LOGOS.png" alt="PFMCP Logo" class="logo">
+        <h2 id="eventName">Event Name:</h2>
+
+        <div class="input-box">
+            <form id="takeAttendanceForm">
+                <label for="memberInput">Member ID / Name:</label>
+                <input type="text" id="memberInput" name="memberInput" required>
+            
+                <div class="button-container">
+                    <button type="button" id="timeIn">Time In</button>
+                    <button type="button" id="timeOut">Time Out</button>
+                </div>
+            </form>
+            
+            <script src="../js/takeAttendance.js"></script>
+            
+        </div>
+        <br>
+        <button class="button-close" onclick="window.close()">Close</button>
+    </div>
+    <script src="../admin/js/adminLogin.js"></script>
+</body>
+</html>

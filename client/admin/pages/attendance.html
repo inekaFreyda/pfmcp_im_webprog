@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Attendance - PFMCP</title>
-    <link rel="stylesheet" href="../css/org profile.css">
+    <link rel="stylesheet" href="../css/event.css">
 </head>
 <body>
 
@@ -17,19 +17,18 @@
             <br>
             <nav>
                 <nav>
-                    <a href="event.html" class="btn-text">Events</a>
+                    <a href="event.html" class="btn-text active">Events</a>
                     <a href="members.html" class="btn-text">Members</a>
-                    <a href="org.html" class="btn-text active">Organizations</a>
+                    <a href="org.html" class="btn-text">Organizations</a>
                 </nav>
-                
             </nav>
             <br>
             <br>
-            <span class="logout-text">Logout</span>
+            <button class="logout">Logout</button>
         </aside>
         <!-- Main Content -->
         <main class="content">
-            <button class="back" onclick="window.location.href='org.html'">Back</button>
+            <button class="back" onclick="window.location.href='event.html'">Back</button>
             <h2 class="profile-title">Attendance</h2>
 
             <div class="profile-container">
@@ -45,11 +44,12 @@
                             <th>Attendance</th>
                         </tr>
                     </thead>
-                    <tbody id="memberTableBody"></tbody>
+                    <tbody id="attendanceTableBody"></tbody>
                 </table>  
             </div>
         </main>
     </div>
-    <script src="../js/attendance.js"></script>
+    <script src="../js/attendanceReport.js"></script>
+    <script src="../js/adminLogout.js"></script> 
 </body>
 </html>
