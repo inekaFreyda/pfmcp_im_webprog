@@ -9,7 +9,14 @@ body {
     display: flex;
     width: 100%;
 }
-
+.back {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #34495E;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 .sidebar {
     width: 250px;
     background-color: #2C3E50;

@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch("http://localhost:3002/event/events") // Update this if needed
+    fetch("http://localhost:3002/event/events") // Fetch all events
         .then(response => response.json())
         .then(events => {
             const tableBody = document.getElementById("eventTableBody");
-            tableBody.innerHTML = "";
+            tableBody.innerHTML = ""; // Clear table before adding new records
 
             events.forEach(event => {
                 const row = document.createElement("tr");

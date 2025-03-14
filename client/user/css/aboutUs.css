@@ -19,6 +19,7 @@ html, body {
 
 
 .nav {
+    letter-spacing: 2px;
     font-weight: bold;
     background-color: #ff9a00;
     width: 100%;

@@ -42,14 +42,18 @@ const Event = {
         });
     },
 
-    updateStatus: (eventID, newStatus, callback) => {
+    updateStatus: (eventID, statusID, callback) => {
         const query = `
-            UPDATE event  -- ✅ Fixed table name
-            SET event_statusID = (SELECT StatusID FROM status WHERE Status = ? AND StatusType = 'Event') 
-            WHERE EventID = ?
+            UPDATE event 
+            SET event_statusID = ? 
+            WHERE EventID = ?;
         `;
-        db.query(query, [newStatus, eventID], (err, result) => {
-            if (err) return callback(err, null);
+
+        db.query(query, [statusID, eventID], (err, result) => {
+            if (err) {
+                console.error("SQL Error:", err); // ✅ Log SQL errors
+                return callback(err, null);
+            }
             callback(null, result);
         });
     },

@@ -7,12 +7,26 @@ document.addEventListener("DOMContentLoaded", function () {
         return;
     }
 
+    // ✅ Fetch event details (Event Name)
+    fetch(`http://localhost:3002/event/${eventID}`)
+        .then(response => response.json())
+        .then(eventData => {
+            if (eventData) {
+                document.getElementById("eventName").textContent = eventData.EventName;
+            } else {
+                document.getElementById("eventName").textContent = "Event Not Found";
+            }
+        })
+        .catch(error => console.error("Error loading event details:", error));
+
     // ✅ Fetch attendance records for this event
     fetch(`http://localhost:3002/attendance/${eventID}`)
         .then(response => response.json())
         .then(attendanceRecords => {
             const tableBody = document.getElementById("attendanceTableBody");
             tableBody.innerHTML = ""; // Clear previous entries
+
+            let memberCount = 0; // ✅ Count attended members
 
             attendanceRecords.forEach(record => {
                 const row = document.createElement("tr");
@@ -26,11 +40,20 @@ document.addEventListener("DOMContentLoaded", function () {
                     <td>${record.Attendance}</td>
                 `;
                 tableBody.appendChild(row);
+                
+                // ✅ Count members with recorded attendance (time-in)
+                if (record.TimeIn) {
+                    memberCount++;
+                }
             });
+
+            // ✅ Update total members attended
+            document.getElementById("members-attended").textContent = memberCount;
         })
         .catch(error => console.error("Error loading attendance:", error));
 });
 
+// ✅ Open Take Attendance Page
 let takeAttendanceWindow; // Store reference to opened window
 
 function openTakeAttendance() {
@@ -41,7 +64,6 @@ function openTakeAttendance() {
         alert("Event ID is missing!");
     }
 }
-
 
 // ✅ Attach event listener to "Open Attendance" button
 document.addEventListener("DOMContentLoaded", function () {

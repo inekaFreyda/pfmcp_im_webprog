@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// ✅ Update Event Status
 document.querySelector(".update-btn").addEventListener("click", function () {
     const eventID = new URLSearchParams(window.location.search).get("id");
     const newStatus = document.getElementById("event-status").value;
@@ -42,9 +41,14 @@ document.querySelector(".update-btn").addEventListener("click", function () {
     fetch(`http://localhost:3002/event/update-status/${eventID}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ statusID: newStatus })
+        body: JSON.stringify({ statusID: newStatus }) // ✅ Ensure JSON format
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Failed to update event status");
+        }
+        return response.json();
+    })
     .then(data => {
         alert("Event status updated!");
         console.log("Updated Event:", data);
@@ -54,6 +58,7 @@ document.querySelector(".update-btn").addEventListener("click", function () {
         alert("Failed to update event status.");
     });
 });
+
 
 // ✅ Format Date as "Month Day, Year"
 function formatDate(dateString) {
@@ -69,4 +74,4 @@ function formatTime(timeString) {
     date.setHours(hours, minutes);
 
     return date.toLocaleTimeString("en-US", { hour: "2-digit", minute: "2-digit", hour12: true });
-}
+};

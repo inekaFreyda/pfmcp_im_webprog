@@ -17,13 +17,20 @@ exports.getEventById = (req, res) => {
     });
 };
 
-exports.updateEventStatus = (req, res) => {
-    const eventID = req.params.eventID;
-    const newStatus = req.body.status;
+exports.updateStatus = (req, res) => {
+    const eventID = req.params.id;
+    const { statusID } = req.body;
 
-    Event.updateStatus(eventID, newStatus, (err, result) => {
-        if (err) return res.status(500).json({ message: 'Error updating event status', error: err });
-        res.json({ message: 'Event status updated successfully', result });
+    if (!eventID || !statusID) {
+        return res.status(400).json({ message: "Missing event ID or status ID" });
+    }
+
+    Event.updateStatus(eventID, statusID, (err, result) => {
+        if (err) {
+            console.error("Error updating event status:", err);
+            return res.status(500).json({ message: "Internal Server Error", error: err });
+        }
+        res.json({ message: "Event status updated successfully", result });
     });
 };
 
