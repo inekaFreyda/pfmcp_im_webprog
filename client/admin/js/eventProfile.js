@@ -23,6 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("event-status").value = event.StatusID; // ✅ Set status dropdown
         })
         .catch(error => console.error("Error loading event:", error));
+
+    // ✅ Attach event listener to "Attendance Report" button
+    const attendReportBtn = document.querySelector(".attend-btn");
+
+    if (attendReportBtn) {
+        attendReportBtn.addEventListener("click", function () {
+            window.location.href = `attendance.html?eventID=${eventID}`;
+        });
+    }
 });
 
 // ✅ Update Event Status

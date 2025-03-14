@@ -1,16 +1,31 @@
-document.getElementById("timeIn").addEventListener("click", function (e) {
-    e.preventDefault();
-    recordAttendance("time-in");
+document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventID = urlParams.get("eventID");
+
+    if (!eventID) {
+        console.error("No event ID found in URL");
+        return;
+    }
+
+    document.getElementById("timeIn").addEventListener("click", function (e) {
+        e.preventDefault();
+        recordAttendance("time-in", eventID);
+    });
+
+    document.getElementById("timeOut").addEventListener("click", function (e) {
+        e.preventDefault();
+        recordAttendance("time-out", eventID);
+    });
+
+    // Attach openTakeAttendance to button (if button exists)
+    const openAttendanceBtn = document.querySelector(".attend-btn");
+    if (openAttendanceBtn) {
+        openAttendanceBtn.addEventListener("click", openTakeAttendance);
+    }
 });
 
-document.getElementById("timeOut").addEventListener("click", function (e) {
-    e.preventDefault();
-    recordAttendance("time-out");
-});
-
-function recordAttendance(type) {
+function recordAttendance(type, eventID) {
     const memberInput = document.getElementById("memberInput").value.trim();
-    const eventID = new URLSearchParams(window.location.search).get("eventID");
 
     if (!memberInput || !eventID) {
         alert("Please enter a valid Member ID or Name and ensure an event is selected.");
@@ -34,4 +49,14 @@ function recordAttendance(type) {
         console.error("Error recording attendance:", error);
         alert("Failed to record attendance.");
     });
+}
+
+// ✅ Function to Open Attendance Page in a New Tab
+function openTakeAttendance() {
+    const eventID = new URLSearchParams(window.location.search).get("eventID");
+    if (eventID) {
+        window.open(`takeAttendance.html?eventID=${eventID}`, "_blank");
+    } else {
+        alert("Event ID is missing!");
+    }
 }
